@@ -1,3 +1,4 @@
+const fetch = require("node-fetch");
 const express = require("express");
 const cors = require("cors");
 const app = express();
@@ -9,7 +10,6 @@ app.use(express.urlencoded({ extended: true }));
 
 app.post("/proxy", async (req, res) => {
   try {
-    const fetch = (await import("node-fetch")).default;
     const response = await fetch("https://script.google.com/macros/s/AKfycbzN0Bf54q9Nh8Jt2LLZiiayGjQWncc_7nLnR1aE-G5bxjwZ6Ha-ZFa2e1B5Ip3Y-jRA/exec", {
       method: "POST",
       headers: {
