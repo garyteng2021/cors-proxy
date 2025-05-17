@@ -17,7 +17,6 @@ app.post("/proxy", upload.none(), async (req, res) => {
         "Content-Type": "application/x-www-form-urlencoded"
       },
       body: new URLSearchParams(req.body).toString()
-      });
     });
 
     const text = await response.text();
