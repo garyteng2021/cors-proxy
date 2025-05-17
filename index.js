@@ -11,7 +11,7 @@ app.use(cors());
 
 app.post("/proxy", upload.none(), async (req, res) => {
   try {
-    const response = await fetch("https://script.google.com/macros/s/YOUR_DEPLOYED_ID/exec", {
+    const response = await fetch("https://script.google.com/macros/s/AKfycbzN0Bf54q9Nh8Jt2LLZiiayGjQWncc_7nLnR1aE-G5bxjwZ6Ha-ZFa2e1B5Ip3Y-jRA/exec", {
       method: "POST",
       headers: {
         "Content-Type": "application/x-www-form-urlencoded"
