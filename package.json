@@ -1,6 +1,7 @@
 {
   "name": "cors-proxy",
   "version": "1.0.0",
+  "description": "Simple CORS proxy to bypass browser CORS policy",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -9,6 +10,7 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.18.2",
+    "multer": "^1.4.5-lts.1",
     "node-fetch": "^3.3.2"
   }
 }
