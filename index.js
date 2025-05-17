@@ -1,6 +1,7 @@
-const fetch = require("node-fetch");
-const express = require("express");
-const cors = require("cors");
+import express from "express";
+import cors from "cors";
+import fetch from "node-fetch";
+
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -13,9 +14,9 @@ app.post("/proxy", async (req, res) => {
     const response = await fetch("https://script.google.com/macros/s/AKfycbzN0Bf54q9Nh8Jt2LLZiiayGjQWncc_7nLnR1aE-G5bxjwZ6Ha-ZFa2e1B5Ip3Y-jRA/exec", {
       method: "POST",
       headers: {
-        "Content-Type": "application/x-www-form-urlencoded"
+        "Content-Type": "application/x-www-form-urlencoded",
       },
-      body: new URLSearchParams(req.body).toString()
+      body: new URLSearchParams(req.body).toString(),
     });
 
     const data = await response.text();
@@ -27,5 +28,5 @@ app.post("/proxy", async (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+  console.log(`CORS Proxy Server is running at http://localhost:${PORT}`);
 });
